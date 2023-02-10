@@ -1,0 +1,19 @@
+<main class="container">
+    {{#each posts as |post|}}
+    <section class="post">
+        <div class="row">
+            <div class="col-6 justify-start">
+                <h2>{{post.title}}</h2>
+            </div>
+            <div class="col-6 justify-end">
+                <p>Posted by {{post.user.username}} on {{post.date_created}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p>{{post.content}}</p>
+            </div>
+        </div>
+    </section>
+    {{/each}}
+</main>
