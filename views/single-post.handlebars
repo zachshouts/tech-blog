@@ -1,0 +1,60 @@
+<main class="container mt-5">
+    <section class="post my-5">
+        <div class="post-title row">
+            <div class="col-6">
+                <h2 class="title">{{post.title}}</h2>
+            </div>
+            <div class="col-6">
+                <p class="m-0">Posted by {{post.User.username}} on {{post.date_created}}</p>
+            </div>
+        </div>
+        <div class="post-body row">
+            <div class="col-12">
+                <p>{{post.content}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <button type="button" id="modalButton" data-bs-toggle="modal" data-bs-target="#modal-form">
+            Launch demo modal
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="modal-form" tabindex="-1" aria-labelledby="modal-form-label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="modal-form-label">Add Your Response</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="modal-form">
+                            <textarea name="response" id="" cols="40" rows="5"></textarea>
+                        </form>
+                        <p class="text-center" id="modalResponse"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="mx-auto" id="addButton" value={{post.id}}>Add</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="comments mt-5">
+        {{#each comments as |comment|}}
+        <div class="comment-title row">
+            <div class="col-4 offset-2">
+                <h2 class="title">Response from {{comment.User.username}}</h2>
+            </div>
+            <div class="col-4">
+                <p class="m-0">Posted on {{comment.date_created}}</p>
+            </div>
+        </div>
+        <div class="comment-body row">
+            <div class="col-8 offset-2">
+                <p class="m-0">{{comment.comment_text}}</p>
+            </div>
+        </div>
+        {{/each}}
+    </section>
+</main>
