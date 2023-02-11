@@ -1,15 +1,15 @@
-<main class="container">
+<main class="container row-gap-3 mt-5">
     {{#each posts as |post|}}
-    <section class="post">
-        <div class="row">
-            <div class="col-6 justify-start">
-                <h2>{{post.title}}</h2>
+    <section class="post my-5">
+        <div class="post-title row">
+            <div class="col-6">
+                <h2 class="title"><a href='/api/posts/{{post.id}}'>{{post.title}}</a></h2>
             </div>
-            <div class="col-6 justify-end">
-                <p>Posted by {{post.user.username}} on {{post.date_created}}</p>
+            <div class="col-6">
+                <p class="m-0">Posted by {{post.User.username}} on {{post.date_created}}</p>
             </div>
         </div>
-        <div class="row">
+        <div class="post-body row">
             <div class="col-12">
                 <p>{{post.content}}</p>
             </div>

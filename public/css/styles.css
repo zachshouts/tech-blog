@@ -1,0 +1,33 @@
+
+body {
+    font-family: 'Merriweather', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(to top right, rgb(0,0,0), rgb(10,10,10));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+}
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+header li>a:hover {
+    color: rgb(196, 193, 193)
+}
+
+.title {
+    font-family: "Playfair Display", sans-serif, serif;
+}
+
+.post-title {
+    background-color:rgb(189, 188, 188);
+}
+
+.post-title a {
+    text-decoration: none;
+    color: black;
+}
+
+.post-body {
+    color:rgb(189, 188, 188)
+}
