@@ -14,8 +14,8 @@
             </div>
         </div>
         <div class="row">
-            <button type="button" id="modalButton" data-bs-toggle="modal" data-bs-target="#modal-form">
-            Launch demo modal
+            <button type="button" class="col-2 mx-auto"id="modalButton" data-bs-toggle="modal" data-bs-target="#modal-form">
+            Add a Response
             </button>
 
             <!-- Modal -->
@@ -28,7 +28,7 @@
                     </div>
                     <div class="modal-body">
                         <form id="modal-form">
-                            <textarea name="response" id="" cols="40" rows="5"></textarea>
+                            <textarea name="response" id="response" cols="40" rows="5"></textarea>
                         </form>
                         <p class="text-center" id="modalResponse"></p>
                     </div>
@@ -42,19 +42,22 @@
     </section>
     <section class="comments mt-5">
         {{#each comments as |comment|}}
-        <div class="comment-title row">
-            <div class="col-4 offset-2">
-                <h2 class="title">Response from {{comment.User.username}}</h2>
+        <section class="comment mt-3">
+            <div class="comment-title row">
+                <div class="col-4 offset-2">
+                    <h2 class="title text-white-50">Response from {{comment.User.username}}</h2>
+                </div>
+                <div class="col-4">
+                    <p class="m-0 text-white-50">Posted on {{comment.date_created}}</p>
+                </div>
             </div>
-            <div class="col-4">
-                <p class="m-0">Posted on {{comment.date_created}}</p>
+            <div class="comment-body row mt-3">
+                <div class="col-8 offset-2">
+                    <p class="m-0 text-white-50">{{comment.comment_text}}</p>
+                </div>
             </div>
-        </div>
-        <div class="comment-body row">
-            <div class="col-8 offset-2">
-                <p class="m-0">{{comment.comment_text}}</p>
-            </div>
-        </div>
+        </section>
         {{/each}}
     </section>
 </main>
+<script src="/js/add-comment.js"></script>

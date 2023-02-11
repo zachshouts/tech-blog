@@ -9,18 +9,19 @@ router.get('/', async (req, res) => {
         const postData = await Post.findAll({
             include: [{ model: User }]
         });
-        console.log(postData);
         const posts = postData.map((post) => post.get({ plain: true }));
-        console.log(posts);
 
         res.render('all', {
             posts,
-            loggedIn: req.session.loggedIn
+            logged_in: req.session.logged_in
         });
     } catch (err) {
-        console.log(err);
         res.status(500).json(err);
     };
+});
+
+router.get('/login', (req, res) => {
+    res.render('login', {});
 });
 
 module.exports = router;

@@ -1,7 +1,8 @@
 const router = require("express").Router();
 const { User, Post, Comment } = require("../../models");
+const auth = require("../../utils/auth");
 
-router.get("/:id", async (req, res) => {
+router.get("/:id", auth, async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id, {
             include: [{ model: User }],
@@ -26,7 +27,7 @@ router.get("/:id", async (req, res) => {
         res.render("single-post", {
             post,
             comments,
-            loggedIn: req.session.loggedIn 
+            logged_in: req.session.logged_in 
         });
     } catch (err) {
         console.log(err);
@@ -34,9 +35,17 @@ router.get("/:id", async (req, res) => {
     }
 });
 
-router.post('/:id/comments', async (req, res) => {
-    console.log(req.body);
-    console.log(obj);
+router.post('/:id/comments', auth, async (req, res) => {
+    try {
+        const comment = await Comment.create({
+            comment_text: req.body.comment_text,
+            post_id: req.params.id,
+            user_id: req.session.user_id
+        });
+        res.status(200).json(comment);
+    } catch (err) {
+        res.status(400).json(err);
+    };
 });
 
 module.exports = router;

@@ -1,0 +1,52 @@
+<section class="container mt-5">
+    <div class="row">
+        <div class="container col-6 m-0">
+            <div class="row justify-content-center">
+                <h2 class="title col-4 text-center text-white">Login</h2>
+            </div>
+            <div class="row justify-content-center">
+                <form id="login-form" class="container col-6" action="/js/login.js">
+                    <div class="row mt-2">
+                        <label for="login-username" class="form-label text-white">Username</label>
+                        <input type="text" class="form-control" name="login-username" id="login-username" required/>
+                    </div>
+                    <div class="row mt-2">
+                        <label for="login-password" class="form-label text-white">Password</label>
+                        <input type="password" class="form-control" name="login-password" id="login-password" required />
+                    </div>
+                    <div class="row mt-2 justify-content-center">
+                        <button type="submit" id="login-button" class="btn btn-sm btn-dark col-4">Login</button>
+                    </div>
+                    <div class="row mt-2 justify-content-center">
+                        <p class="text-center text-white" id="login-status"></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="container col-6 m-0">
+            <div class="row justify-content-center">
+                <h2 class="title col-4 text-center text-white">Signup</h2>
+            </div>
+            <div class="row justify-content-center">
+                <form id="signup-form" class="container col-6" action="/js/signup.js">
+                    <div class="row mt-2">
+                        <label for="signup-username" class="form-label text-white">Username</label>
+                        <input type="text" class="form-control" name="signup-username" id="signup-username" required />
+                    </div>
+                    <div class="row mt-2">
+                        <label for="signup-password" class="form-label text-white">Password</label>
+                        <input type="password" class="form-control" name="signup-password" id="signup-password" required />
+                    </div>
+                    <div class="row mt-2 justify-content-center">
+                        <button type="submit" id="signup-button" class="btn btn-sm btn-dark col-4">Signup</button>
+                    </div>
+                    <div class="row mt-2 justify-content-center">
+                        <p class="text-center text-white" id="signup-status"></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="/js/login.js"></script>
+<script src="/js/signup.js"></script>

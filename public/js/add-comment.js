@@ -7,11 +7,9 @@ async function addResponse(e) {
     postId = e.target.value;
     const body = {
         comment_text: responseText.value,
-        user_id: req.session.user_id,
-        post_id: postId
     };
 
-    const commentResponse = await fetch('/api/posts/:id/comment', {
+    const commentResponse = await fetch(`/api/posts/${postId}/comments`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
