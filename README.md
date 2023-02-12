@@ -5,7 +5,7 @@
 - [User Story](#user-story)
 - [Acceptance Criteria](#acceptance-criteria)
 - [Live Site](#live-site)
-- [Description](#description)
+- [Project Description](#project-description)
 
 
 ## User Story
