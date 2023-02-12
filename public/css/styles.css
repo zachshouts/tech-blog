@@ -15,29 +15,6 @@ header li>a:hover {
     color: rgb(196, 193, 193)
 }
 
-#modalButton {
-    border-radius: 1rem;
-    background-color: rgb(189, 188, 188);
-}
-
-#saveBtn {
-    border-radius: 1rem;
-    background-color: rgb(189, 188, 188);
-}
-
-#deleteBtn {
-    border-radius: 1rem;
-    background-color: rgb(189, 188, 188);
-}
-
-#add-post {
-    border-radius: 1rem;
-    background-color: rgb(189, 188, 188);
-}
-
-#add-post-save {
-
-}
 .buttons {
     border-radius: 1rem;
     background-color: rgb(189, 188, 188);
