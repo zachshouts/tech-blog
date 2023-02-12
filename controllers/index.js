@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const apiRoutes = require("./api");
 const { User, Comment, Post } = require('../models');
+const format_date = require('../utils/helpers');
 
 router.use('/api', apiRoutes);
 
@@ -10,6 +11,7 @@ router.get('/', async (req, res) => {
             include: [{ model: User }]
         });
         const posts = postData.map((post) => post.get({ plain: true }));
+        posts.map((post) => post.date_created = format_date(post.date_created));
 
         res.render('all', {
             posts,

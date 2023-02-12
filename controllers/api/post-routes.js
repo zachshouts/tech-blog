@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { User, Post, Comment } = require("../../models");
 const auth = require("../../utils/auth");
+const format_date = require("../../utils/helpers");
 
 router.get("/:id", auth, async (req, res) => {
     try {
@@ -22,7 +23,10 @@ router.get("/:id", auth, async (req, res) => {
             };
             
         const post = postData.get({ plain: true });
+        post.date_created = format_date(post.date_created);
         const comments = commentData.map((comment) => comment.get({ plain: true }));
+        comments.map((comment) => comment.date_created = format_date(comment.date_created));
+
 
         res.render("single-post", {
             post,

@@ -5,7 +5,7 @@
                 <h2 class="title">{{post.title}}</h2>
             </div>
             <div class="col-6">
-                <p class="m-0">Posted by {{post.User.username}} on {{post.date_created}}</p>
+                <p class="m-0 text-end">Posted by {{post.User.username}} on {{post.date_created}}</p>
             </div>
         </div>
         <div class="post-body row">
@@ -48,7 +48,7 @@
                     <h2 class="title text-white-50">Response from {{comment.User.username}}</h2>
                 </div>
                 <div class="col-4">
-                    <p class="m-0 text-white-50">Posted on {{comment.date_created}}</p>
+                    <p class="m-0 text-white-50 text-end">Posted on {{comment.date_created}}</p>
                 </div>
             </div>
             <div class="comment-body row mt-3">
