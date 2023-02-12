@@ -15,12 +15,41 @@ header li>a:hover {
     color: rgb(196, 193, 193)
 }
 
+#modalButton {
+    border-radius: 1rem;
+    background-color: rgb(189, 188, 188);
+}
+
+#saveBtn {
+    border-radius: 1rem;
+    background-color: rgb(189, 188, 188);
+}
+
+#deleteBtn {
+    border-radius: 1rem;
+    background-color: rgb(189, 188, 188);
+}
+
+#add-post {
+    border-radius: 1rem;
+    background-color: rgb(189, 188, 188);
+}
+
+#add-post-save {
+
+}
+.buttons {
+    border-radius: 1rem;
+    background-color: rgb(189, 188, 188);
+}
+
 .title {
     font-family: "Playfair Display", sans-serif, serif;
 }
 
 .post-title {
     background-color:rgb(189, 188, 188);
+    border-radius: 1rem;
 }
 
 .post-title a {
@@ -29,5 +58,5 @@ header li>a:hover {
 }
 
 .post-body {
-    color:rgb(189, 188, 188)
+    color:rgb(189, 188, 188);
 }

@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="row">
-            <button type="button" class="col-2 mx-auto"id="modalButton" data-bs-toggle="modal" data-bs-target="#modal-form">
+            <button type="button" class="buttons col-2 mx-auto" data-bs-toggle="modal" data-bs-target="#modal-form">
             Add a Response
             </button>
 
@@ -27,13 +27,13 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form id="modal-form">
+                        <form id="comment-modal-form">
                             <textarea name="response" id="response" cols="40" rows="5"></textarea>
                         </form>
-                        <p class="text-center" id="modalResponse"></p>
+                        <p class="text-center" id="commentModalResponse"></p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="mx-auto" id="addButton" value={{post.id}}>Add</button>
+                        <button type="button" id="addCommentBtn" class="buttons mx-auto" value={{post.id}}>Add</button>
                     </div>
                     </div>
                 </div>

@@ -1,0 +1,18 @@
+<main class="container mt-5">
+    <h1 class="text-white text-center">Edit Post</h1>
+    <form>
+        <div class="row my-3">
+            <label for="edit-title" class="form-label text-white">Title</label>
+            <input type="text" class="form-control bg-black text-white-50" id="edit-title" value={{post.title}} />
+        </div>
+        <div class="row my-3">
+            <label for="edit-content" class="form-label text-white">Contents</label>
+            <textarea class="form-control bg-black text-white-50" id="edit-content" rows="8">{{post.content}}</textarea>
+        </div>
+        <div class="row my-3 justify-content-center">
+            <button type="button" id="saveBtn" class="buttons col-2 mx-1" value={{post.id}}>Save</button>
+            <button type="button" id="deleteBtn" class="buttons col-2 mx-1" value={{post.id}}>Delete</button>
+        </div>
+    </form>
+</main>
+<script src="/js/edit-post.js"></script>

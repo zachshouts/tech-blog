@@ -35,6 +35,30 @@ router.get("/:id", auth, async (req, res) => {
     }
 });
 
+router.put('/:id', auth, async (req, res) => {
+    try {
+        const post = await Post.update(req.body, {
+            where: {
+                id: req.params.id
+            }
+        });
+
+        res.status(200).json(post);
+    } catch (err) {
+        res.status(500).json(err);
+    };
+});
+
+router.post('/', auth, async (req, res) => {
+    try {
+        const post = await Post.create({...req.body, user_id: req.session.user_id});
+
+        res.status(200).json(post);
+    } catch (err) {
+        res.status(400).json(err);
+    };
+});
+
 router.post('/:id/comments', auth, async (req, res) => {
     try {
         const comment = await Comment.create({
@@ -45,6 +69,20 @@ router.post('/:id/comments', auth, async (req, res) => {
         res.status(200).json(comment);
     } catch (err) {
         res.status(400).json(err);
+    };
+});
+
+router.delete('/:id', auth, async (req, res) => {
+    try {
+        const postData = await Post.destroy({
+            where: {
+                id: req.params.id
+            }
+        });
+
+        res.status(200).json(postData);
+    } catch (err) {
+        res.status(500).json(err);
     };
 });
 

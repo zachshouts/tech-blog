@@ -1,6 +1,6 @@
-const addButton = document.getElementById('addButton');
+const addButton = document.getElementById('addCommentBtn');
 const responseText = document.getElementById('response');
-const modalResponse = document.getElementById('modalResponse');
+const modalResponse = document.getElementById('commentModalResponse');
 let postId;
 
 async function addResponse(e) {

@@ -1,0 +1,50 @@
+<main class="container mt-5">
+    <div class="row">
+        <h1 class="text-white text-center">Dashboard</h1>
+        <button type="button" class="buttons col-1 mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Add Post
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add Post</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="post-modal-form">
+                        <label for="newPostTitle" class="form-label">Title</label>
+                        <input type="text" id="newPostTitle" class="form-control"/>
+                        <label for="newPostContent" class="form-label">Content</label>
+                        <textarea name="newPostContent" id="newPostContent" cols="40" rows="5"></textarea>
+                    </form>
+                    <p class="text-center" id="postModalResponse"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="saveBtn" class="buttons mx-auto">Save Changes</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{#each posts as |post|}}
+    <section class="post my-5">
+        <div class="post-title row">
+            <div class="col-6">
+                <h2 class="title"><a href='/api/dashboard/edit/{{post.id}}'>{{post.title}}</a></h2>
+            </div>
+            <div class="col-6">
+                <p class="m-0">Posted by {{post.User.username}} on {{post.date_created}}</p>
+            </div>
+        </div>
+        <div class="post-body row mt-2">
+            <div class="col-12">
+                <p>{{post.content}}</p>
+            </div>
+        </div>
+    </section>
+    {{/each}}
+</main>
+<script src="/js/add-post.js"></script>
