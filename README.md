@@ -1,6 +1,12 @@
 # Full-Stack Tech Blog
 
-Check back soon for link to the live site
+## Table of Contents
+
+- [User Story](#user-story)
+- [Acceptance Criteria](#acceptance-criteria)
+- [Live Site](#live-site)
+- [Description](#description)
+
 
 ## User Story
 
@@ -46,4 +52,41 @@ WHEN I click on the logout option in the navigation
 THEN I am signed out of the site
 WHEN I am idle on the site for more than a set time
 THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
+```
+
+## Live Site
+
+[Click to view live site](https://tech-blog-zachshouts.herokuapp.com/)
+
+![Live site homepage](./assets/imgs/tech-blog-home.png)
+
+![Live site dashboard](./assets/imgs/tech-blog-dashboard.png)
+
+
+## Project Description
+
+During this challenge I incorporated features from the MVC unit:
+
+```
+- Server side rendering with handlebars
+
+- Express sessions to track user logged in status
+
+- Middleware to restrict access to guest users
+
+- Deployment and connection to the database on Heroku
+
+- The MVC file structure
+
+- Password encryption using bcrypt and model hooks
+```
+
+Previous unit incorporations include: 
+
+```
+- Modular routing using express
+
+- Object relational mapping using sequelize
+
+- Custom utility functions
 ```
