@@ -58,9 +58,7 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 
 [Click to view live site](https://tech-blog-zachshouts.herokuapp.com/)
 
-![Live site homepage](./assets/imgs/tech-blog-home.png)
-
-![Live site dashboard](./assets/imgs/tech-blog-dashboard.png)
+![Live site dashboard](./assets/imgs/tech-blog-macbook.png)
 
 
 ## Project Description
